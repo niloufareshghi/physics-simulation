@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1582711830 source:f:\graphic c\simulation\main.cpp
+	<iostream>
+	<graphics.h>
+	<cmath>
+
