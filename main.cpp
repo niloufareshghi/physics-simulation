@@ -4,7 +4,7 @@
 using namespace std;
 
 const double DT = 0.001;
-const double g = 100;
+const double g = 10;
 
 struct Vector{
     double x;
@@ -157,12 +157,26 @@ void render(){
 void init(){
     nodes = (Node*) calloc(0,sizeof(Node));
     springs = (Spring*) calloc(0,sizeof(Spring));
-    add_node(Vector(100,100), 1, Vector(0,0), true);
-    add_node(Vector(200,100), 1, Vector(0,0), false);
-    //add_node(Vector(100,150), 1, Vector(0,0), false);
-    add_spring(100, 1000, &nodes[0], &nodes[1]);
-    //add_spring(100, 10, &nodes[1], &nodes[2]);
-    //add_spring(100, 10, &nodes[0], &nodes[2]);
+    add_node(Vector(100,100), 800, Vector(0,0), true);
+    add_node(Vector(100,150), 800, Vector(0,0), false);
+    add_node(Vector(100,200), 800, Vector(0,0), false);
+    add_node(Vector(100,250), 800, Vector(10,0), false);
+
+    add_node(Vector(200,100), 800, Vector(0,0), true);
+    add_node(Vector(200,150), 800, Vector(0,0), false);
+    add_node(Vector(200,200), 800, Vector(-10,0), false);
+
+    add_node(Vector(300,100), 800, Vector(0,0), true);
+    add_node(Vector(300,150), 800, Vector(10,0), false);
+
+    add_spring(50, 20, &nodes[0], &nodes[1]);
+    add_spring(50, 20, &nodes[1], &nodes[2]);
+    add_spring(50, 20, &nodes[2], &nodes[3]);
+
+    add_spring(50, 20, &nodes[4], &nodes[5]);
+    add_spring(50, 20, &nodes[5], &nodes[6]);
+
+    add_spring(50, 20, &nodes[7], &nodes[8]);
 
 }
 
