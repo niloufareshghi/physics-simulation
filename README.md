@@ -1,2 +1,2 @@
 # physics-simulation
-a simulation of physics phenomenon
+a simulation of spring-mass system
